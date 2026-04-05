@@ -49,3 +49,12 @@ create table customer (
     email varchar(100),
     created_at timestamp default current_timestamp
 );
+
+create table sessions (
+	session_id int auto_increment not null primary key,
+	client_id int, foreign key (client_id) references customer(client_id),
+	free_text_input text not null,
+	safety_cleared boolean,
+	block_reason varchar(100),
+	submitted_at timestamp default current_timestamp
+);
