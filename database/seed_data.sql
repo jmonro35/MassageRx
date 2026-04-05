@@ -25,3 +25,14 @@ values
 insert into symptom_keyword (keyword, weight, rationale, massage_id, area_id)
 values
 ('tight', 10, 'tightness responds well to deep tissue massage', 2, 1); --need to add more data
+
+insert into safety_question (question_text, topic, block_message)
+values
+('Are you currently pregnant?', 'pregnancy', 'Thank you for your response. This facility does not offer prenatal massage. Please contact the facility directly for other recommendations.'),
+('Do you have a history of blood clots? i.e deep vein thrombosis', 'blood clots', 'Thank you for your response. Massage therapy may not be recommended at this time. Please contact the facility directly'),
+('Have you sustained an injury in the last 48 hours?', 'recent injury', 'Thank you for your response. Massage therapy may not be recommended at this time. Please contact the facility directly'),
+('Have you been diagnosed with hypertension?', 'hypertension', 'Thank you for your response. Massage therapy may not be recommended at this time. Please contact the facility directly');
+
+update safety_question
+set topic = 'recent_injury'
+where topic = 'recent injury';

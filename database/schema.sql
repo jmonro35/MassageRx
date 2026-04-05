@@ -31,3 +31,21 @@ create table symptom_keyword (
 	area_id int, foreign key (area_id) references body_area(area_id)
 );
 
+create table safety_question (
+	saftey_question_id int auto_increment primary key,
+    question_text text not null,
+    topic varchar(50),
+    block_message text not null
+);
+describe safety_question;
+
+alter table safety_question
+rename column saftey_question_id to safety_question_id;
+
+create table customer (
+	client_id int auto_increment not null primary key,
+    first_name varchar(50) not null,
+    last_name varchar(50) not null,
+    email varchar(100),
+    created_at timestamp default current_timestamp
+);
