@@ -58,3 +58,11 @@ create table sessions (
 	block_reason varchar(100),
 	submitted_at timestamp default current_timestamp
 );
+
+create table massage_score (
+	score_id int auto_increment primary key,
+    session_id int, foreign key (session_id) references sessions(session_id),
+    massage_id int, foreign key (massage_id) references massage_type (massage_id),
+    total_score int,
+    rationale text
+);
