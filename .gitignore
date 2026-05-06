@@ -1,0 +1,18 @@
+# mySQL credentials
+config.py
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+
+# VS Code settings
+.vscode/
+
+# Mac junk
+.DS_Store
+
+# Environment files
+.env
