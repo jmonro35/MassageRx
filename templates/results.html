@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MassageRx - Your Recommendation</title>
+</head>
+<body>
+    <h1>Your MassageRx Recommendation</h1>
+
+    {% if message %}
+        <p>{{ message }}</p>
+        <a href="/">Try again</a>
+
+    {% else %}
+        <h2>{{ result.name }}</h2>
+        <p><strong>Why:</strong> {{ result.rationale }}</p>
+        <p><strong>Estimated Price:</strong> ${{ result.base_price }}</p>
+        <p><strong>About this massage:</strong> {{ result.description }}</p>
+
+        <br>
+        <a href="/">Start over</a>
+    {% endif %}
+</body>
+</html>

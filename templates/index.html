@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MassageRx</title>
+</head>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        max-width: 600px;
+        margin: 40px auto;
+        padding: 0 20px;
+    }
+    textarea {
+        width: 100%;
+        margin-top: 10px;
+    }
+    button {
+        margin-top: 10px;
+        padding: 10px 20px;
+    }
+</style>
+<body>
+    <h1>MassageRx</h1>
+    <h3>Tell us how you are feeling today</h3>
+    
+    <form action="/screen" method="POST">
+        <textarea 
+            name="symptoms" 
+            rows="4" 
+            cols="50" 
+            placeholder="Describe your symptoms... example: my neck is tight and my lower back is sore"
+            required></textarea>
+        <br><br>
+        <button type="submit">Continue</button>
+    </form>
+</body>
+</html>

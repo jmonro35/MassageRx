@@ -36,3 +36,21 @@ values
 update safety_question
 set topic = 'recent_injury'
 where topic = 'recent injury';
+
+INSERT INTO symptom_keyword (keyword, weight, rationale, massage_id, area_id)
+VALUES
+('sore', 8, 'soreness responds well to deep tissue work', 2, 6),
+('pain', 7, 'pain relief is a primary benefit of deep tissue massage', 2, 6),
+('knot', 9, 'muscle knots are effectively treated with deep tissue pressure', 2, 2),
+('tension', 7, 'muscle tension responds well to trigger point therapy', 4, 1),
+('stress', 8, 'stress relief is the primary goal of swedish massage', 1, 11),
+('relax', 9, 'relaxation is best achieved through swedish massage', 1, 11),
+('stiff', 7, 'stiffness responds well to deep tissue work', 2, 1),
+('ache', 6, 'general aching benefits from deep tissue massage', 2, 6),
+('strain', 8, 'muscle strain responds well to sports massage', 3, 9),
+('tired', 6, 'muscle fatigue benefits from swedish massage', 1, 11),
+('sport', 9, 'athletic recovery is best supported by sports massage', 3, 11),
+('injury', 8, 'injury recovery benefits from sports massage therapy', 3, 9),
+('pressure', 7, 'pressure points respond well to trigger point therapy', 4, 2),
+('spasm', 9, 'muscle spasms respond well to trigger point therapy', 4, 6),
+('burning', 7, 'burning sensation benefits from trigger point release', 4, 2);

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MassageRx - Safety Screening</title>
+</head>
+<body>
+    <h1>Safety Screening</h1>
+    <p>Please answer the following questions honestly for your safety.</p>
+
+    <form action="/results" method="POST">
+        
+        <!-- passes client text through to results route -->
+        <input type="hidden" name="client_text" value="{{ client_text }}">
+
+        <p>1. Are you currently pregnant?</p>
+        <input type="radio" name="q1" value="yes"> Yes
+        <input type="radio" name="q1" value="no" checked> No
+        <br><br>
+
+        <p>2. Have you had surgery or a significant injury in the last 6 weeks?</p>
+        <input type="radio" name="q2" value="yes"> Yes
+        <input type="radio" name="q2" value="no" checked> No
+        <br><br>
+
+        <p>3. Do you have a history of blood clots or heart condition?</p>
+        <input type="radio" name="q3" value="yes"> Yes
+        <input type="radio" name="q3" value="no" checked> No
+        <br><br>
+
+        <p>4. Do you currently have uncontrolled high or low blood pressure?</p>
+        <input type="radio" name="q4" value="yes"> Yes
+        <input type="radio" name="q4" value="no" checked> No
+        <br><br>
+
+        <button type="submit">Get My Recommendation</button>
+    </form>
+</body>
+</html>
