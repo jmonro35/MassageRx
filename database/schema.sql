@@ -11,19 +11,6 @@ CREATE TABLE massage_type (
     massage_base_price DECIMAL (6,2)
 );
 
--- HAD TO DROP THIS TABLE DUE TO TIME CONSTRAINT 
---CREATE TABLE add_on (
-    --addon_id INT AUTO_INCREMENT PRIMARY KEY,
-    --addon_name VARCHAR(50) NOT NULL,
-    --addon_description TEXT,
-    --addon_price DECIMAL (6,2) NOT NULL
---);
-
-create table body_area (
-	area_id INT primary key auto_increment ,
-    area_name varchar(50) not null,
-    region enum('upper', 'lower', 'full') not null
-);
 
 create table symptom_keyword (
 	symptom_keyword_id int auto_increment primary key,
@@ -45,23 +32,6 @@ describe safety_question;
 alter table safety_question
 rename column saftey_question_id to safety_question_id;
 
-create table customer (
-	client_id int auto_increment not null primary key,
-    first_name varchar(50) not null,
-    last_name varchar(50) not null,
-    email varchar(100),
-    created_at timestamp default current_timestamp
-);
-
-create table sessions (
-	session_id int auto_increment not null primary key,
-	client_id int, foreign key (client_id) references customer(client_id),
-	free_text_input text not null,
-	safety_cleared boolean,
-	block_reason varchar(100),
-	submitted_at timestamp default current_timestamp
-);
-
 create table massage_score (
 	score_id int auto_increment primary key,
     session_id int, foreign key (session_id) references sessions(session_id),
@@ -69,3 +39,29 @@ create table massage_score (
     total_score int,
     rationale text
 );
+
+-- HAD TO DROP THIS TABLE DUE TO TIME CONSTRAINT 
+--CREATE TABLE add_on (
+    --addon_id INT AUTO_INCREMENT PRIMARY KEY,
+    --addon_name VARCHAR(50) NOT NULL,
+    --addon_description TEXT,
+    --addon_price DECIMAL (6,2) NOT NULL
+--);
+
+--create table customer (
+	--client_id int auto_increment not null primary key,
+    --first_name varchar(50) not null,
+    --last_name varchar(50) not null,
+    --email varchar(100),
+    --created_at timestamp default current_timestamp
+--);
+
+--create table sessions (
+	--session_id int auto_increment not null primary key,
+	--client_id int, foreign key (client_id) references customer(client_id),
+	--free_text_input text not null,
+	--safety_cleared boolean,
+	--block_reason varchar(100),
+	--submitted_at timestamp default current_timestamp
+--);
+

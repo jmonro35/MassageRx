@@ -7,22 +7,6 @@ VALUES
 ('Sports Massage', 'Massage meant for pre-event or post-event muscle recovery to increase circulation', 'medium', 80.00),
 ('Trigger Point', 'Massage that targets specific localized points of pain as a result of injury or overuse', 'firm', 95.00);
 
-insert into body_area (area_name, region)
-values
-('Neck', 'upper'),
-('Shoulder', 'upper'),
-('Elbow', 'upper'),
-('Wrist', 'upper'),
-('Hand', 'upper'),
-('Upper back','upper'),
-('Torso', 'full'),
-('Back', 'full'),
-('Low back', 'lower'),
-('Hip', 'lower'),
-('Thigh', 'lower'),
-('Knee','lower'),
-('Calf', 'lower'),
-('Foot', 'lower');
 
 -- initial data for keyword table just to make sure python code recognized the words correctly 
 insert into symptom_keyword (keyword, weight, rationale, massage_id, area_id)
