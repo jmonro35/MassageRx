@@ -1,3 +1,5 @@
+
+
 CREATE DATABASE IF NOT EXISTS massagerx;
 USE massagerx;
 
@@ -9,12 +11,13 @@ CREATE TABLE massage_type (
     massage_base_price DECIMAL (6,2)
 );
 
-CREATE TABLE add_on (
-    addon_id INT AUTO_INCREMENT PRIMARY KEY,
-    addon_name VARCHAR(50) NOT NULL,
-    addon_description TEXT,
-    addon_price DECIMAL (6,2) NOT NULL
-);
+-- HAD TO DROP THIS TABLE DUE TO TIME CONSTRAINT 
+--CREATE TABLE add_on (
+    --addon_id INT AUTO_INCREMENT PRIMARY KEY,
+    --addon_name VARCHAR(50) NOT NULL,
+    --addon_description TEXT,
+    --addon_price DECIMAL (6,2) NOT NULL
+--);
 
 create table body_area (
 	area_id INT primary key auto_increment ,

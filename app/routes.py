@@ -3,13 +3,13 @@ from app.scoring import score_symptoms
 
 main = Blueprint('main', __name__)
 
-@main.route('/')
+@main.route('/') #this is my home screen
 def index():
-    return render_template('index.html')
+    return render_template('index.html') #show this html template
 
-@main.route('/screen', methods=['POST'])
+@main.route('/screen', methods=['POST']) #screening page... POST is SEND ANSWERS FROM SCREENING TO DATABASE
 def screen():
-    client_text = request.form['symptoms']
+    client_text = request.form['symptoms'] 
     return render_template('screening.html', client_text=client_text)
 
 @main.route('/results', methods=['POST'])
